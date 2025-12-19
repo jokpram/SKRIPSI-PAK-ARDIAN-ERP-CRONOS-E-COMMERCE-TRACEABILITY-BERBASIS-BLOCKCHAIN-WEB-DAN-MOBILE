@@ -17,3 +17,4 @@ export * as OrderService from './order/order.service.js';
 export * as PaymentService from './order/payment.service.js';
 
 export * as TraceabilityService from './traceability/traceability.service.js';
+export * as PondLocationService from './pond/pondLocation.service.js';
