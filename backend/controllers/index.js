@@ -17,3 +17,4 @@ export * as OrderController from './order/order.controller.js';
 export * as PaymentController from './order/payment.controller.js';
 
 export * as TraceabilityController from './traceability/traceability.controller.js';
+export * as PondLocationController from './pond/pondLocation.controller.js';
