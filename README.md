@@ -188,9 +188,7 @@ Designed to support blockchain integration for immutable records
 
 Dockerized for reproducible academic and production testing
 
-Repository Views
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=jokpram&repo=SKRIPSI-PAK-ARDIAN-ERP-CRONOS-E-COMMERCE-TRACEABILITY-BERBASIS-BLOCKCHAIN-WEB-DAN-MOBILE&label=Repository+Views&color=0A66C2&style=flat" alt="Repository View Counter" /> </p>
-Acknowledgement
+
 This project is inspired by previous academic and practical works developed by senior contributors and is intended for educational, research, and prototype implementation purposes in smart aquaculture systems.
 
 License
