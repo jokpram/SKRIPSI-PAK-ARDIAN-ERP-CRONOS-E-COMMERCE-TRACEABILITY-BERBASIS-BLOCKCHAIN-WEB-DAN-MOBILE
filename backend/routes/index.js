@@ -20,6 +20,7 @@ import orderRoutes from './order/order.routes.js';
 import paymentRoutes from './order/payment.routes.js';
 
 import traceabilityRoutes from './traceability/traceability.routes.js';
+import pondLocationRoutes from './pond/pondLocation.routes.js';
 
 const router = express.Router();
 
@@ -48,5 +49,8 @@ router.use('/payments', paymentRoutes);
 
 /* TRACEABILITY */
 router.use('/traceability', traceabilityRoutes);
+
+/* PETAMBAK */
+router.use('/pond/locations', pondLocationRoutes);
 
 export default router;
