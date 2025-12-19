@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    container_name: fastapi-tambak
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - mqtt
+    networks:
+      - tambak-net
+
+  postgres:
+    image: postgres:18
+    container_name: postgres-tambak
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: huwekhuwek1111
+      POSTGRES_DB: akutauakukegeerancumanakusayangkamulho
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - tambak-net
+
+  mqtt:
+    image: eclipse-mosquitto:2
+    container_name: mqtt-tambak
+    restart: always
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-log:/mosquitto/log
+    networks:
+      - tambak-net
+
+volumes:
+  pgdata:
+  mosquitto-data:
+  mosquitto-log:
+
+networks:
+  tambak-net:
+    driver: bridge

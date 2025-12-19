@@ -1,0 +1,67 @@
+{
+  "path": "/first-test/",
+  "method": "GET",
+  "public": true,
+  "in": [],
+  "out": [
+    "result"
+  ],
+  "configs": [],
+  "control": [
+    "error"
+  ],
+  "nodes": [
+    {
+      "tag": "c0",
+      "box": {
+        "left": 433,
+        "right": 675,
+        "top": 141,
+        "bottom": 271
+      },
+      "path": "/db/query"
+    },
+    {
+      "tag": "v0",
+      "box": {
+        "left": 182,
+        "right": 354,
+        "top": 145,
+        "bottom": 145
+      },
+      "expr": "{\n  // give the query a unique name\n  name: 'fetch-user',\n  text: 'SELECT * FROM users WHERE id = $1',\n  values: [1]\n}"
+    }
+  ],
+  "links": [
+    [
+      {
+        "c0": {
+          "out": "result"
+        }
+      },
+      {
+        "out": "result"
+      }
+    ],
+    [
+      {
+        "v0": "result"
+      },
+      {
+        "c0": {
+          "in": "query"
+        }
+      }
+    ],
+    [
+      {
+        "c0": {
+          "control": "error"
+        }
+      },
+      {
+        "out": "error"
+      }
+    ]
+  ]
+}
