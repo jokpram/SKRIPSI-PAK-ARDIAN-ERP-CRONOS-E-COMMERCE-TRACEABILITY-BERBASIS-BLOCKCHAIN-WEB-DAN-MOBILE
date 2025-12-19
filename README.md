@@ -139,7 +139,7 @@ CRONOS is developed as part of an academic research project and serves as a foun
 
 ```bash
 git clone https://github.com/jokpram/SKRIPSI-PAK-ARDIAN-ERP-CRONOS-E-COMMERCE-TRACEABILITY-BERBASIS-BLOCKCHAIN-WEB-DAN-MOBILE.git
-cd backend-node
+cd backend
 cp .env.example .env
 docker-compose up -d
 Backend will be accessible at: http://localhost:9000
@@ -147,7 +147,7 @@ Backend will be accessible at: http://localhost:9000
 Option 2: FastAPI Backend with MQTT
 bash
 git clone https://github.com/jokpram/SKRIPSI-PAK-ARDIAN-ERP-CRONOS-E-COMMERCE-TRACEABILITY-BERBASIS-BLOCKCHAIN-WEB-DAN-MOBILE.git
-cd backend-fastapi
+cd microservices
 cp .env.example .env
 docker-compose up -d
 API will be accessible at: http://localhost:8000
