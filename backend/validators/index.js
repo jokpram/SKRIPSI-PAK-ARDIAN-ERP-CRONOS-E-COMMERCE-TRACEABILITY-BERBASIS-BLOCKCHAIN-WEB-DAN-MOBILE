@@ -17,3 +17,4 @@ export * as OrderValidator from './order/order.validator.js';
 export * as PaymentValidator from './order/payment.validator.js';
 
 export * as TraceabilityValidator from './traceability/traceability.validator.js';
+export * as PondLocationValidator from './pond/pondLocation.validator.js';
