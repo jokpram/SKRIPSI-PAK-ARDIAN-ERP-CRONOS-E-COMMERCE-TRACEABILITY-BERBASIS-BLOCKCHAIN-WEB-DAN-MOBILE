@@ -7,6 +7,7 @@ import Logistik from './Logistik.js';
 import Konsumen from './Konsumen.js';
 
 import RefreshToken from './RefreshToken.js';
+import PondLocation from './PondLocation.js';
 
 import ShrimpType from './ShrimpType.js';
 import ShrimpSeed from './ShrimpSeed.js';
@@ -46,6 +47,9 @@ PondPlan.belongsTo(Petambak);
 
 PondPlan.hasMany(HarvestPlan);
 HarvestPlan.belongsTo(PondPlan);
+
+Petambak.hasMany(PondLocation, { foreignKey: 'petambak_id' });
+PondLocation.belongsTo(Petambak, { foreignKey: 'petambak_id' });
 
 // LOGISTIK
 Logistik.hasMany(LogisticPrice);
@@ -94,4 +98,5 @@ export {
   Payment,
   Traceability,
   BlockchainLedger,
+  PondLocation,
 };
